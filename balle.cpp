@@ -41,3 +41,7 @@ void balle::afficher() const
     fillellipse(d_centre.x(),d_centre.y(),d_radius,d_radius);
 }
 
+bool balle::rentreDans(const surfaceRebondissante& surface) const
+{
+
+}

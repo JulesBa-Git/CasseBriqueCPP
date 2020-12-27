@@ -16,6 +16,9 @@ public :
     //methodes permettant de deplacer le palet
     void deplacePalet();
 
+    //mettre des methodes qui renvoie les points
+
+
 private :
     point d_pointHautGauche;
     point d_pointBasDroit;

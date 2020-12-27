@@ -3,6 +3,7 @@
 #include "point.h"
 #include "vecteur.h"
 #include "graphics.h"
+#include "surfaceRebondissante.h"
 
 class balle{
 public :
@@ -25,6 +26,9 @@ public :
 
     //permet d'afficher la balle
     void afficher() const;
+
+    //savoir si la balle est rentrée dans une surface rebondissante pour reagir avec un rebond
+    bool rentreDans(const surfaceRebondissante& surface) const;
 
 private :
     point d_centre;

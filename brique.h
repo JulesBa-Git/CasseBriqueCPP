@@ -17,6 +17,8 @@ public :
     bool estTouchee() const;
     void AeteTouchee();
 
+    //mettre des methodes qui renvoie les points
+
 private :
     point d_pointHautGauche;
     point d_pointBasDroit;

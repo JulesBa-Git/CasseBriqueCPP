@@ -18,22 +18,22 @@ void palet::faitRebonndir(balle& b)
 
 void palet::deplacePalet()
 {
-if(kbhit() != 0)
-    {
-        switch(getch())
+    if(kbhit() != 0)
         {
-        case static_cast<int>(char{'q'}) : //a faire ! verifier que la balle est dans le terrain
-            d_pointBasDroit.deplaceDe(-20,0);
-            d_pointHautGauche.deplaceDe(-20,0);
-            break;
-        case static_cast<int>(char{'d'}) :
-            d_pointBasDroit.deplaceDe(20,0);
-            d_pointHautGauche.deplaceDe(20,0);
-            break;
-        default :
-            std::cout<<"unkown key pressed"<<std::endl;
-            break;
+            switch(getch())
+            {
+            case static_cast<int>(char{'q'}) : //a faire ! verifier que la balle est dans le terrain
+                d_pointBasDroit.deplaceDe(-20,0);
+                d_pointHautGauche.deplaceDe(-20,0);
+                break;
+            case static_cast<int>(char{'d'}) :
+                d_pointBasDroit.deplaceDe(20,0);
+                d_pointHautGauche.deplaceDe(20,0);
+                break;
+            default :
+                std::cout<<"unkown key pressed"<<std::endl;
+                break;
+            }
         }
-    }
 }
 

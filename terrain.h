@@ -11,11 +11,14 @@ public :
     //constructeur de terrain a partir d'un fichier car on veut pouvoir creer un terrain a partir d'un fichier puis le sauvegarder
     terrain(const std::string& nomFichierTerrain);
 
+    //renvoie la balle du terrain au jeu
+    balle balleDuTerrain() const;
+
     //afficher le terrain
     void afficher() const;
 
     //sauvegarder le terrain
-    void sauver();
+    void sauver() const;
 
 private :
     std::vector<surfaceRebondissante> d_surfaceRebondissantes;
