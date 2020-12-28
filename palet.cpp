@@ -5,7 +5,7 @@ palet::palet(const point &hautGauche, const point &basDroit) : surfaceRebondissa
 {}
 
 
-void palet::faitRebonndir(balle& b)
+void palet::faitRebondir(balle& b,int arriveeDeLaBalle)
 {
 
 }

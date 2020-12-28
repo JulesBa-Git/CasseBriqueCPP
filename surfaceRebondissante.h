@@ -1,5 +1,6 @@
 #include "graphics.h"
 #include "point.h"
+#include "balle.h"
 
 #ifndef SURFACEREBONDISSANTE_H
 #define SURFACEREBONDISSANTE_H
@@ -13,7 +14,11 @@ public :
     virtual ~surfaceRebondissante();
     surfaceRebondissante(const point &hautGauche, const point &basDroit);
     virtual void afficher() const;
-    virtual void faitRebonndir(balle& b) =0;
+    virtual void faitRebondir(balle& b,int arriveeDeLaBalle) =0;
+    double xPointHautGauche() const;
+    double yPointHautGauche() const;
+    double xPointBasDroit() const;
+    double yPointBasDroit() const;
 
     //acceder aux points
     point pointHautGauche() const;

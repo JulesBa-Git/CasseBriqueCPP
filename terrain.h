@@ -2,6 +2,7 @@
 #include <vector>
 #include "surfaceRebondissante.h"
 #include "balle.h"
+#include "palet.h"
 #include <memory>
 
 #ifndef TERRAIN_H
@@ -13,8 +14,12 @@ public :
     //constructeur de terrain a partir d'un fichier car on veut pouvoir creer un terrain a partir d'un fichier puis le sauvegarder
     terrain(const std::string& nomFichierTerrain);
 
-    //renvoie la balle du terrain au jeu
+    //renvoie la balle du terrain au jeu et le palet
     balle balleDuTerrain() const;
+    palet paletDuTerrain() const;
+
+    const surfaceRebondissante* SurfaceNumero(int i) const;
+    std::unique_ptr<surfaceRebondissante> SurfaceNumero(int i);
 
     //afficher le terrain
     void afficher() const;
@@ -24,6 +29,7 @@ public :
 
 private :
     std::vector<std::unique_ptr<surfaceRebondissante>> d_surfaceRebondissantes;
+    palet d_palet;
     balle d_balle;
     std::string NomFichierTerrain;
 

@@ -1,5 +1,6 @@
 #include "surfaceRebondissante.h"
-
+#include "balle.h"
+#include <iostream>
 #ifndef MUR_H
 #define MUR_H
 
@@ -10,7 +11,7 @@ public :
     mur(const point &hautGauche, const point &basDroit);
 
     //redéfinitions des methodes virtuelles
-    virtual void faitRebonndir(balle& b) override;
+    virtual void faitRebondir(balle& b,int arriveeDeLaBalle)  override;
 
 };
 
