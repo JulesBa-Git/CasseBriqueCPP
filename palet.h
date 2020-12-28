@@ -10,7 +10,7 @@ public :
 
 
     //redéfinitions des methodes virtuelles
-    virtual void faitRebonndir(balle& b) override;
+    virtual void faitRebondir(balle& b,int arriveeDeLaBalle) override;
 
     //methodes permettant de deplacer le palet
     void deplacePalet();

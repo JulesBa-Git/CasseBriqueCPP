@@ -4,7 +4,7 @@ brique::brique(const point &hautGauche, const point &basDroit) : surfaceRebondis
 {}
 
 
-void brique::faitRebonndir(balle& b)
+void brique::faitRebondir(balle& b,int arriveeDeLaBalle)
 {
 
 }
