@@ -16,25 +16,26 @@ int main()
     surfaceTerrain.push_back(std::make_unique<mur>(point{100,100},point{110,300}));
     surfaceTerrain.push_back(std::make_unique<mur>(point{110,100},point{310,110}));
     surfaceTerrain.push_back(std::make_unique<mur>(point{310,100},point{320,300}));
-    surfaceTerrain.push_back(std::make_unique<mur>(point{110,290},point{310,300}));
+    //surfaceTerrain.push_back(std::make_unique<mur>(point{110,290},point{310,300}));
 
     opengraphsize(800,800);
-
-    balle balle{point{240,190},vecteur{2.0,1.0},10};
+    std::unique_ptr<palet> paletTerrain{std::make_unique<palet>(point{210,290},point{250,295})};
+    balle balle{point{240,190},vecteur{3.0,1.5},10};
     int temps =0;
-    while(temps < 200)
+    while(temps < 500)
     {
 
         cleardevice();
         balle.afficher();
         balle.bouger(1);
+        paletTerrain->afficher();
+        paletTerrain->deplacePalet();
+        balle.rentreDans(paletTerrain.get());
         for(int i = 0; i< surfaceTerrain.size(); ++i)
         {
             surfaceTerrain[i]->afficher();
             balle.rentreDans(surfaceTerrain[i].get());
         }
-
-
 
         ++temps;
         Sleep(20);
