@@ -10,18 +10,11 @@ public :
 
 
     //redéfinitions des methodes virtuelles
-    virtual void afficher() const override;
     virtual void faitRebonndir(balle& b) override;
 
     //methodes permettant de deplacer le palet
     void deplacePalet();
 
-    //mettre des methodes qui renvoie les points
-
-
-private :
-    point d_pointHautGauche;
-    point d_pointBasDroit;
 
 };
 

@@ -10,14 +10,7 @@ public :
     mur(const point &hautGauche, const point &basDroit);
 
     //redéfinitions des methodes virtuelles
-    virtual void afficher() const override;
     virtual void faitRebonndir(balle& b) override;
-
-    //mettre des methodes qui renvoie les points
-
-private :
-    point d_pointHautGauche;
-    point d_pointBasDroit;
 
 };
 

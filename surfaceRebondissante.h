@@ -11,7 +11,17 @@ class balle;
 class surfaceRebondissante{
 public :
     virtual ~surfaceRebondissante();
-    virtual void afficher() const =0;
+    surfaceRebondissante(const point &hautGauche, const point &basDroit);
+    virtual void afficher() const;
     virtual void faitRebonndir(balle& b) =0;
+
+    //acceder aux points
+    point pointHautGauche() const;
+    point pointBasDroit() const;
+
+protected :
+    point d_pointHautGauche;
+    point d_pointBasDroit;
+
 };
 #endif // SURFACEREBONDISSANTE_H

@@ -2,6 +2,8 @@
 #include <vector>
 #include "surfaceRebondissante.h"
 #include "balle.h"
+#include <memory>
+
 #ifndef TERRAIN_H
 #define TERRAIN_H
 
@@ -21,7 +23,7 @@ public :
     void sauver() const;
 
 private :
-    std::vector<surfaceRebondissante> d_surfaceRebondissantes;
+    std::vector<std::unique_ptr<surfaceRebondissante>> d_surfaceRebondissantes;
     balle d_balle;
     std::string NomFichierTerrain;
 

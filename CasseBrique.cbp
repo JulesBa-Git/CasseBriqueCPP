@@ -32,7 +32,25 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="balle.cpp" />
+		<Unit filename="balle.h" />
+		<Unit filename="brique.cpp" />
+		<Unit filename="brique.h" />
+		<Unit filename="graphics.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="mur.cpp" />
+		<Unit filename="mur.h" />
+		<Unit filename="palet.cpp" />
+		<Unit filename="palet.h" />
+		<Unit filename="point.cpp" />
+		<Unit filename="point.h" />
+		<Unit filename="surfaceRebondissante.cpp" />
+		<Unit filename="surfaceRebondissante.h" />
+		<Unit filename="terrain.cpp" />
+		<Unit filename="terrain.h" />
+		<Unit filename="vecteur.cpp" />
+		<Unit filename="vecteur.h" />
+		<Unit filename="winbgi.cpp" />
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>

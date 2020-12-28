@@ -10,18 +10,13 @@ public :
 
 
     //redéfinitions des methodes virtuelles
-    virtual void afficher() const override;
     virtual void faitRebonndir(balle& b) override;
 
     //methode permettant de savoir si la balle est touchee ou non et l'autre permettant de modifier son etat
     bool estTouchee() const;
     void AeteTouchee();
 
-    //mettre des methodes qui renvoie les points
-
 private :
-    point d_pointHautGauche;
-    point d_pointBasDroit;
     bool d_estTouchee;
 
 };
