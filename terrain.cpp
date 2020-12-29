@@ -31,8 +31,8 @@ terrain::terrain(const std::string& nomFichierTerrain):
         /*hauteur-=100;
         largeur-=100;*/
 
-        for(int i=xPointHautGauche+60; i<=largeur+60; i+=20)
-            for(int j=yPointHautGauche+60; j<=hauteur-100; j+=10)
+        for(int i=xPointHautGauche+60; i<=largeur+60; i+=60)
+            for(int j=yPointHautGauche+60; j<=hauteur-100; j+=30)
                 d_surfaceBrique.push_back(std::make_unique<brique>(point{i,j},point{i+20,j+10}));
 
 
@@ -64,7 +64,7 @@ const palet* terrain::paletDuTerrain() const
     return d_palet.get();
 }
 
-void terrain::afficher()
+void terrain::afficherToutTerrain()
 {
     for(const auto& mur : d_surfaceMur)
         mur->afficher();
@@ -75,29 +75,51 @@ void terrain::afficher()
         {
             supprimeBriqueTouchee(i);
         }
-        else
-        {
-            d_surfaceBrique[i]->afficher();
-        }
     }
-
+    for(int i = 0; i < d_surfaceBrique.size(); ++i)
+    {
+        d_surfaceBrique[i]->afficher();
+    }
 
     d_palet->afficher();
     d_balle.bouger(1);
-    d_balle.afficher();
+    d_balle.afficher(WHITE);
 }
 
-void terrain::collision()
+void terrain::afficherBalle()
+{
+    d_balle.afficher(BLACK);
+    d_balle.bouger(1);
+    d_balle.afficher(WHITE);
+}
+
+void terrain::afficherPalet()
+{
+    d_palet->afficher();
+}
+
+bool terrain::collision()
 {
     for(auto& mur : d_surfaceMur)
     {
-        d_balle.rentreDans(mur.get());
+        if (d_balle.rentreDans(mur.get()))
+        {
+            return true;
+        }
+
     }
     for(auto& briques : d_surfaceBrique)
     {
-        d_balle.rentreDans(briques.get());
+        if (d_balle.rentreDans(briques.get()))
+        {
+            return true;
+        }
     }
-    d_balle.rentreDans(d_palet.get());
+    if (d_balle.rentreDans(d_palet.get()))
+    {
+        return true;
+    }
+    return false;
 }
 
 void terrain::deplacerPalet()
@@ -114,6 +136,11 @@ void terrain::supprimeBriqueTouchee(int i)
 bool terrain::plusDeBrique() const
 {
     return d_surfaceBrique.empty();
+}
+
+bool terrain::balleSousTerrain() const
+{
+    return (d_balle.milieu().y() > d_palet->yPointBasDroit());
 }
 
 

@@ -26,10 +26,10 @@ public :
     void changeVitesse(double x, double y);
 
     //permet d'afficher la balle
-    void afficher() const;
+    void afficher(int couleur) const;
 
     //savoir si la balle est rentrée dans une surface rebondissante pour reagir avec un rebond
-    void rentreDans(surfaceRebondissante* surface);
+    bool rentreDans(surfaceRebondissante* surface);
 
     //differente maniere que la balle a de rentrée dans une surface rebondissante
     bool contactParLaGauche(surfaceRebondissante* surface) const;

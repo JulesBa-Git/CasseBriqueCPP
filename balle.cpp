@@ -47,32 +47,40 @@ void balle::changeVitesse(double x, double y)
     d_vitesse.devient(x,y);
 }
 
-void balle::afficher() const
+void balle::afficher(int couleur) const
 {
+    setcolor(couleur);
     fillellipse(d_centre.x(),d_centre.y(),d_radius,d_radius);
 }
 
-void balle::rentreDans(surfaceRebondissante* surface)
+bool balle::rentreDans(surfaceRebondissante* surface)
 {
     if(contactParLaDroite(surface))
     {
         MiseAjourPosition(surface->xPointHautGauche()-d_radius, d_centre.y());
         surface->faitRebondir(*this,CONTACT_VERTICALE);
+        return true;
     }
     else if(contactParLaGauche(surface))
     {
         MiseAjourPosition(surface->xPointBasDroit()+d_radius, d_centre.y());
         surface->faitRebondir(*this,CONTACT_VERTICALE);
+        return true;
     }
     else if(contactParLeBas(surface))
     {
         MiseAjourPosition(d_centre.x(), surface->pointHautGauche().y()- d_radius);
         surface->faitRebondir(*this,CONTACT_HORIZONTALE);
+        return true;
     }
     else if(contactParLeHaut(surface))
     {
         MiseAjourPosition(d_centre.x(), surface->pointBasDroit().y() + d_radius);
         surface->faitRebondir(*this,CONTACT_HORIZONTALE);
+        return true;
+    }
+    else{
+        return false;
     }
 }
 

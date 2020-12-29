@@ -22,13 +22,17 @@ public :
     const palet* paletDuTerrain() const;
 
     //afficher le terrain
-    void afficher();
-    void collision();
+    void afficherToutTerrain();
+    void afficherBalle();
+    void afficherPalet();
+
+    bool collision();
     void deplacerPalet();
 
     void supprimeBriqueTouchee(int i);
 
     bool plusDeBrique() const;
+    bool balleSousTerrain() const;
 
     //sauvegarder le terrain
     void sauver() const;
