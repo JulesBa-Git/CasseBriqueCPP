@@ -8,6 +8,7 @@ class jeu{
 public :
     jeu(const std::string& nomFichierTerrain);
     void run();
+    void afficher();
 
 private :
     terrain d_terrain;
