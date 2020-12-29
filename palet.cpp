@@ -19,7 +19,6 @@ void palet::faitRebondir(balle& b,int arriveeDeLaBalle)
     }
 }
 
-
 void palet::deplacePalet()
 {
     if(kbhit() != 0)
