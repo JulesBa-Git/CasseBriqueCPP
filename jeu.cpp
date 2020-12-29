@@ -14,5 +14,9 @@ void jeu::run()
         d_GameOver = d_terrain.plusDeBrique();
         Sleep(20);
     }
+}
 
+void jeu::afficher()
+{
+    d_terrain.afficher();
 }

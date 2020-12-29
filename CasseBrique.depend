@@ -131,7 +131,7 @@
 1609247934 d:\gitshare\cassebriquecpp\brique.h
 	"surfaceRebondissante.h"
 
-1609247934 source:d:\gitshare\cassebriquecpp\main.cpp
+1609262443 source:d:\gitshare\cassebriquecpp\main.cpp
 	<iostream>
 	"mur.h"
 	"balle.h"
@@ -154,11 +154,11 @@
 1609247934 d:\gitshare\cassebriquecpp\palet.h
 	"surfaceRebondissante.h"
 
-1609247934 d:\gitshare\cassebriquecpp\jeu.h
+1609256996 d:\gitshare\cassebriquecpp\jeu.h
 	"terrain.h"
 	<windows.h>
 
-1609247934 d:\gitshare\cassebriquecpp\terrain.h
+1609256996 d:\gitshare\cassebriquecpp\terrain.h
 	<iostream>
 	<vector>
 	"surfaceRebondissante.h"
@@ -182,7 +182,7 @@
 1609247934 source:d:\gitshare\cassebriquecpp\surfacerebondissante.cpp
 	"surfaceRebondissante.h"
 
-1609247934 source:d:\gitshare\cassebriquecpp\terrain.cpp
+1609261934 source:d:\gitshare\cassebriquecpp\terrain.cpp
 	"terrain.h"
 
 1609247934 source:d:\gitshare\cassebriquecpp\vecteur.cpp
@@ -194,4 +194,14 @@
 	<stdio.h>
 	<math.h>
 	"graphics.h"
+
+1609247934 source:d:\gitshare\cassebriquecpp\briquenormal.cpp
+	"BriqueNormal.h"
+
+1609247934 d:\gitshare\cassebriquecpp\briquenormal.h
+	"brique.h"
+	"point.h"
+
+1609260049 source:d:\gitshare\cassebriquecpp\jeu.cpp
+	"jeu.h"
 
