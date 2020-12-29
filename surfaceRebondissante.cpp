@@ -15,6 +15,12 @@ void surfaceRebondissante::afficher() const
     fillpoly(4,tableauCotes);
 }
 
+void surfaceRebondissante::afficher(int couleur) const
+{
+    setcolor(couleur);
+    afficher();
+}
+
 void surfaceRebondissante::faitRebondir(balle& b,int arriveeDeLaBalle)
 {
     if(arriveeDeLaBalle == b.CONTACT_VERTICALE)

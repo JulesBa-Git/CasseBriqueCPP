@@ -93,10 +93,12 @@ void terrain::afficherBalle()
     d_balle.afficher(WHITE);
 }
 
+/*
 void terrain::afficherPalet()
 {
     d_palet->afficher();
 }
+*/
 
 bool terrain::collision()
 {
@@ -122,7 +124,7 @@ bool terrain::collision()
     return false;
 }
 
-void terrain::deplacerPalet()
+void terrain::deplacementPalet()
 {
     d_palet->deplacePalet();
     if (paletADroiteDuTerrain())
@@ -136,6 +138,13 @@ void terrain::deplacerPalet()
         distanceADeplacer =  d_surfaceMur.front()->xPointBasDroit() - d_palet->xPointHautGauche();
         d_palet->deplacePalet(distanceADeplacer);
     }
+}
+
+void terrain::modifierPalet()
+{
+    d_palet->afficher(BLACK);
+    deplacementPalet();
+    d_palet->afficher(WHITE);
 }
 
 bool terrain::paletAGaucheDuTerrain()

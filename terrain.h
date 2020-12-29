@@ -24,10 +24,11 @@ public :
     //afficher le terrain
     void afficherToutTerrain();
     void afficherBalle();
-    void afficherPalet();
+
+    //void afficherPalet(); plus utilisé
 
     bool collision();
-    void deplacerPalet();
+    void deplacementPalet();
 
     void supprimeBriqueTouchee(int i);
 
@@ -36,6 +37,8 @@ public :
 
     bool paletAGaucheDuTerrain();
     bool paletADroiteDuTerrain();
+
+    void modifierPalet();
 
     //sauvegarder le terrain
     void sauver() const;
