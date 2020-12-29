@@ -15,6 +15,20 @@ void surfaceRebondissante::afficher() const
     fillpoly(4,tableauCotes);
 }
 
+void surfaceRebondissante::faitRebondir(balle& b,int arriveeDeLaBalle)
+{
+    if(arriveeDeLaBalle == b.CONTACT_VERTICALE)
+    {
+        double NewX = (b.vitesse().x())*(-1.0);
+        b.changeVitesse(NewX,b.vitesse().y());
+    }
+    else if (arriveeDeLaBalle == b.CONTACT_HORIZONTALE)
+    {
+        double NewY = (b.vitesse().y())*(-1.0);
+        b.changeVitesse(b.vitesse().x(),NewY);
+    }
+}
+
 point surfaceRebondissante::pointHautGauche() const
 {
     return d_pointHautGauche;

@@ -205,3 +205,108 @@
 1609260049 source:d:\gitshare\cassebriquecpp\jeu.cpp
 	"jeu.h"
 
+1609271855 source:c:\users\celad\onedrive\bureau\l3\qualite prog\casse_briques\cassebriquecpp-test\cassebriquecpp\balle.cpp
+	"balle.h"
+
+1609271855 c:\users\celad\onedrive\bureau\l3\qualite prog\casse_briques\cassebriquecpp-test\cassebriquecpp\balle.h
+	"point.h"
+	"vecteur.h"
+	"graphics.h"
+	"surfaceRebondissante.h"
+
+1609271855 c:\users\celad\onedrive\bureau\l3\qualite prog\casse_briques\cassebriquecpp-test\cassebriquecpp\point.h
+	<iostream>
+	<cmath>
+
+1609271855 c:\users\celad\onedrive\bureau\l3\qualite prog\casse_briques\cassebriquecpp-test\cassebriquecpp\vecteur.h
+	<iostream>
+
+1609271855 c:\users\celad\onedrive\bureau\l3\qualite prog\casse_briques\cassebriquecpp-test\cassebriquecpp\graphics.h
+
+1609273684 c:\users\celad\onedrive\bureau\l3\qualite prog\casse_briques\cassebriquecpp-test\cassebriquecpp\surfacerebondissante.h
+	"graphics.h"
+	"point.h"
+	"balle.h"
+
+1609274046 source:c:\users\celad\onedrive\bureau\l3\qualite prog\casse_briques\cassebriquecpp-test\cassebriquecpp\brique.cpp
+	"brique.h"
+	"surfaceRebondissante.h"
+
+1609273684 c:\users\celad\onedrive\bureau\l3\qualite prog\casse_briques\cassebriquecpp-test\cassebriquecpp\brique.h
+	"surfaceRebondissante.h"
+
+1609271855 source:c:\users\celad\onedrive\bureau\l3\qualite prog\casse_briques\cassebriquecpp-test\cassebriquecpp\briquenormal.cpp
+	"BriqueNormal.h"
+
+1609271855 c:\users\celad\onedrive\bureau\l3\qualite prog\casse_briques\cassebriquecpp-test\cassebriquecpp\briquenormal.h
+	"brique.h"
+	"point.h"
+
+1609271855 source:c:\users\celad\onedrive\bureau\l3\qualite prog\casse_briques\cassebriquecpp-test\cassebriquecpp\jeu.cpp
+	"jeu.h"
+
+1609271855 c:\users\celad\onedrive\bureau\l3\qualite prog\casse_briques\cassebriquecpp-test\cassebriquecpp\jeu.h
+	"terrain.h"
+	<windows.h>
+
+1609275387 c:\users\celad\onedrive\bureau\l3\qualite prog\casse_briques\cassebriquecpp-test\cassebriquecpp\terrain.h
+	<iostream>
+	<vector>
+	"surfaceRebondissante.h"
+	"balle.h"
+	"palet.h"
+	"mur.h"
+	"brique.h"
+	<memory>
+	<fstream>
+
+1609275962 c:\users\celad\onedrive\bureau\l3\qualite prog\casse_briques\cassebriquecpp-test\cassebriquecpp\palet.h
+	"surfaceRebondissante.h"
+
+1609274040 c:\users\celad\onedrive\bureau\l3\qualite prog\casse_briques\cassebriquecpp-test\cassebriquecpp\mur.h
+	"surfaceRebondissante.h"
+	"balle.h"
+	<iostream>
+
+1609271855 source:c:\users\celad\onedrive\bureau\l3\qualite prog\casse_briques\cassebriquecpp-test\cassebriquecpp\main.cpp
+	<iostream>
+	"mur.h"
+	"balle.h"
+	"palet.h"
+	"brique.h"
+	"surfaceRebondissante.h"
+	<vector>
+	<memory>
+	"jeu.h"
+	"point.h"
+	"vecteur.h"
+	"terrain.h"
+	<windows.h>
+
+1609274041 source:c:\users\celad\onedrive\bureau\l3\qualite prog\casse_briques\cassebriquecpp-test\cassebriquecpp\mur.cpp
+	"mur.h"
+	"surfaceRebondissante.h"
+
+1609271855 source:c:\users\celad\onedrive\bureau\l3\qualite prog\casse_briques\cassebriquecpp-test\cassebriquecpp\point.cpp
+	"point.h"
+
+1609273840 source:c:\users\celad\onedrive\bureau\l3\qualite prog\casse_briques\cassebriquecpp-test\cassebriquecpp\surfacerebondissante.cpp
+	"surfaceRebondissante.h"
+
+1609277050 source:c:\users\celad\onedrive\bureau\l3\qualite prog\casse_briques\cassebriquecpp-test\cassebriquecpp\terrain.cpp
+	"terrain.h"
+
+1609271855 source:c:\users\celad\onedrive\bureau\l3\qualite prog\casse_briques\cassebriquecpp-test\cassebriquecpp\vecteur.cpp
+	"vecteur.h"
+
+1609271855 source:c:\users\celad\onedrive\bureau\l3\qualite prog\casse_briques\cassebriquecpp-test\cassebriquecpp\winbgi.cpp
+	<windows.h>
+	<stddef.h>
+	<stdio.h>
+	<math.h>
+	"graphics.h"
+
+1609274081 source:c:\users\celad\onedrive\bureau\l3\qualite prog\casse_briques\cassebriquecpp-test\cassebriquecpp\palet.cpp
+	"palet.h"
+	<iostream>
+

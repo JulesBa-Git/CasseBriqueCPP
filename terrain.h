@@ -34,6 +34,9 @@ public :
     bool plusDeBrique() const;
     bool balleSousTerrain() const;
 
+    bool paletAGaucheDuTerrain();
+    bool paletADroiteDuTerrain();
+
     //sauvegarder le terrain
     void sauver() const;
 

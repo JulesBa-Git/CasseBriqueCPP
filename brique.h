@@ -12,11 +12,12 @@ public :
 
     //redéfinitions des methodes virtuelles
     virtual void afficher() const override;
+
     virtual void faitRebondir(balle& b,int arriveeDeLaBalle) override;
 
     //methode permettant de savoir si la balle est touchee ou non et l'autre permettant de modifier son etat
     bool estTouchee() const;
-    void AeteTouchee();
+    void aEteTouchee();
 
 private :
     bool d_estTouchee;

@@ -1,4 +1,5 @@
 #include "brique.h"
+#include "surfaceRebondissante.h"
 
 brique::brique(const point &hautGauche, const point &basDroit) : surfaceRebondissante{hautGauche,basDroit}, d_estTouchee{false}
 {}
@@ -11,17 +12,8 @@ void brique::afficher() const
 
 void brique::faitRebondir(balle& b,int arriveeDeLaBalle)
 {
-    if(arriveeDeLaBalle == b.CONTACT_VERTICALE)
-    {
-        double NewX = (b.vitesse().x())*(-1.0);
-        b.changeVitesse(NewX,b.vitesse().y());
-    }
-    else if (arriveeDeLaBalle == b.CONTACT_HORIZONTALE)
-    {
-        double NewY = (b.vitesse().y())*(-1.0);
-        b.changeVitesse(b.vitesse().x(),NewY);
-    }
-    AeteTouchee();
+    surfaceRebondissante::faitRebondir(b,arriveeDeLaBalle);
+    aEteTouchee();
 }
 
 bool brique::estTouchee() const
@@ -29,7 +21,7 @@ bool brique::estTouchee() const
     return d_estTouchee;
 }
 
-void brique::AeteTouchee()
+void brique::aEteTouchee()
 {
     d_estTouchee = true;
 }

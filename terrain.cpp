@@ -125,8 +125,28 @@ bool terrain::collision()
 void terrain::deplacerPalet()
 {
     d_palet->deplacePalet();
+    if (paletADroiteDuTerrain())
+    {
+        int distanceADeplacer;
+        distanceADeplacer = d_palet->xPointBasDroit() - d_surfaceMur.back()->xPointHautGauche();
+        d_palet->deplacePalet(-distanceADeplacer);
+    }else if (paletAGaucheDuTerrain())
+    {
+        int distanceADeplacer;
+        distanceADeplacer =  d_surfaceMur.front()->xPointBasDroit() - d_palet->xPointHautGauche();
+        d_palet->deplacePalet(distanceADeplacer);
+    }
 }
 
+bool terrain::paletAGaucheDuTerrain()
+{
+    return  d_surfaceMur.front()->xPointBasDroit() > d_palet->xPointHautGauche();
+}
+
+bool terrain::paletADroiteDuTerrain()
+{
+    return d_palet->xPointBasDroit() > d_surfaceMur.back()->xPointHautGauche();
+}
 
 void terrain::supprimeBriqueTouchee(int i)
 {
@@ -142,5 +162,3 @@ bool terrain::balleSousTerrain() const
 {
     return (d_balle.milieu().y() > d_palet->yPointBasDroit());
 }
-
-

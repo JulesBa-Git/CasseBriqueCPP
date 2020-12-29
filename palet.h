@@ -10,10 +10,14 @@ public :
 
 
     //redéfinitions des methodes virtuelles
-    virtual void faitRebondir(balle& b,int arriveeDeLaBalle) override;
+
 
     //methodes permettant de deplacer le palet
     void deplacePalet();
+    void deplacePalet(int distance);
+
+private :
+    static const int TAILLE_DEPLACEMENT = 20;
 
 
 };
