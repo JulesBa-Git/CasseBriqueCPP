@@ -3,7 +3,10 @@
 #include "surfaceRebondissante.h"
 #include "balle.h"
 #include "palet.h"
+#include "mur.h"
+#include "brique.h"
 #include <memory>
+#include <fstream>
 
 #ifndef TERRAIN_H
 #define TERRAIN_H
@@ -16,22 +19,26 @@ public :
 
     //renvoie la balle du terrain au jeu et le palet
     balle balleDuTerrain() const;
-    palet paletDuTerrain() const;
-
-    const surfaceRebondissante* SurfaceNumero(int i) const;
-    std::unique_ptr<surfaceRebondissante> SurfaceNumero(int i);
+    const palet* paletDuTerrain() const;
 
     //afficher le terrain
-    void afficher() const;
+    void afficher();
+    void collision();
+    void deplacerPalet();
+
+    void supprimeBriqueTouchee(int i);
+
+    bool plusDeBrique() const;
 
     //sauvegarder le terrain
     void sauver() const;
 
 private :
-    std::vector<std::unique_ptr<surfaceRebondissante>> d_surfaceRebondissantes;
-    palet d_palet;
+    std::vector<std::unique_ptr<mur>> d_surfaceMur;
+    std::vector<std::unique_ptr<brique>> d_surfaceBrique;
+    std::unique_ptr<palet> d_palet;
     balle d_balle;
-    std::string NomFichierTerrain;
+    std::string d_nomFichierTerrain;
 
 
 
