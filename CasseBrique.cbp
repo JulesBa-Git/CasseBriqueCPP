@@ -32,11 +32,15 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="BriqueNormal.cpp" />
+		<Unit filename="BriqueNormal.h" />
 		<Unit filename="balle.cpp" />
 		<Unit filename="balle.h" />
 		<Unit filename="brique.cpp" />
 		<Unit filename="brique.h" />
 		<Unit filename="graphics.h" />
+		<Unit filename="jeu.cpp" />
+		<Unit filename="jeu.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="mur.cpp" />
 		<Unit filename="mur.h" />
