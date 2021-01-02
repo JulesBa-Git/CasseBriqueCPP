@@ -52,13 +52,16 @@
 		<Unit filename="palet.h" />
 		<Unit filename="point.cpp" />
 		<Unit filename="point.h" />
+		<Unit filename="pointTest.cpp" />
 		<Unit filename="surfaceRebondissante.cpp" />
 		<Unit filename="surfaceRebondissante.h" />
+		<Unit filename="surfaceRebondissanteTest.cpp" />
 		<Unit filename="terrain.cpp" />
 		<Unit filename="terrain.h" />
 		<Unit filename="terrainTest.cpp" />
 		<Unit filename="vecteur.cpp" />
 		<Unit filename="vecteur.h" />
+		<Unit filename="vecteurTest.cpp" />
 		<Unit filename="winbgi.cpp" />
 		<Extensions />
 	</Project>

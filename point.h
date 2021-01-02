@@ -27,6 +27,9 @@ public :
     //procédure permettant de modifier les coordonnées d'un point
     void deplaceDe(double dx, double dy);
     void deplaceEn(double x, double y);
+
+    bool operator==(const point& pt) const;
+
 private :
 
     double d_x;

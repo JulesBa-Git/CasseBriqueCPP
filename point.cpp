@@ -56,3 +56,8 @@ void point::deplaceEn(double x, double y)
     d_y = y;
 }
 
+bool point::operator==(const point& pt) const
+{
+    return d_x==pt.d_x && d_y==pt.d_y;
+}
+
