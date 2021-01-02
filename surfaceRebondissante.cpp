@@ -23,12 +23,12 @@ void surfaceRebondissante::afficher(int couleur) const
 
 void surfaceRebondissante::faitRebondir(balle& b,int arriveeDeLaBalle)
 {
-    if(arriveeDeLaBalle == b.CONTACT_VERTICALE)
+    if(arriveeDeLaBalle == b.CONTACT_VERTICAL)
     {
         double NewX = (b.vitesse().x())*(-1.0);
         b.changeVitesse(NewX,b.vitesse().y());
     }
-    else if (arriveeDeLaBalle == b.CONTACT_HORIZONTALE)
+    else if (arriveeDeLaBalle == b.CONTACT_HORIZONTAL)
     {
         double NewY = (b.vitesse().y())*(-1.0);
         b.changeVitesse(b.vitesse().x(),NewY);

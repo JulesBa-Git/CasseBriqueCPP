@@ -1,7 +1,7 @@
 #include "balle.h"
 
-const int balle::CONTACT_HORIZONTALE{1};
-const int balle::CONTACT_VERTICALE{2};
+const int balle::CONTACT_HORIZONTAL{1};
+const int balle::CONTACT_VERTICAL{2};
 
 
 
@@ -58,25 +58,25 @@ bool balle::rentreDans(surfaceRebondissante* surface)
     if(contactParLaDroite(surface))
     {
         MiseAjourPosition(surface->xPointHautGauche()-d_radius, d_centre.y());
-        surface->faitRebondir(*this,CONTACT_VERTICALE);
+        surface->faitRebondir(*this,CONTACT_VERTICAL);
         return true;
     }
     else if(contactParLaGauche(surface))
     {
         MiseAjourPosition(surface->xPointBasDroit()+d_radius, d_centre.y());
-        surface->faitRebondir(*this,CONTACT_VERTICALE);
+        surface->faitRebondir(*this,CONTACT_VERTICAL);
         return true;
     }
     else if(contactParLeBas(surface))
     {
         MiseAjourPosition(d_centre.x(), surface->pointHautGauche().y()- d_radius);
-        surface->faitRebondir(*this,CONTACT_HORIZONTALE);
+        surface->faitRebondir(*this,CONTACT_HORIZONTAL);
         return true;
     }
     else if(contactParLeHaut(surface))
     {
         MiseAjourPosition(d_centre.x(), surface->pointBasDroit().y() + d_radius);
-        surface->faitRebondir(*this,CONTACT_HORIZONTALE);
+        surface->faitRebondir(*this,CONTACT_HORIZONTAL);
         return true;
     }
     else{

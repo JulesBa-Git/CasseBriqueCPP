@@ -36,12 +36,16 @@
 		<Unit filename="BriqueNormal.h" />
 		<Unit filename="balle.cpp" />
 		<Unit filename="balle.h" />
+		<Unit filename="balleTest.cpp" />
 		<Unit filename="brique.cpp" />
 		<Unit filename="brique.h" />
+		<Unit filename="briqueTest.cpp" />
+		<Unit filename="doctest.h" />
 		<Unit filename="graphics.h" />
 		<Unit filename="jeu.cpp" />
 		<Unit filename="jeu.h" />
-		<Unit filename="main.cpp" />
+		<Unit filename="jeuTest.cpp" />
+		<Unit filename="mainTest.cpp" />
 		<Unit filename="mur.cpp" />
 		<Unit filename="mur.h" />
 		<Unit filename="palet.cpp" />
@@ -52,6 +56,7 @@
 		<Unit filename="surfaceRebondissante.h" />
 		<Unit filename="terrain.cpp" />
 		<Unit filename="terrain.h" />
+		<Unit filename="terrainTest.cpp" />
 		<Unit filename="vecteur.cpp" />
 		<Unit filename="vecteur.h" />
 		<Unit filename="winbgi.cpp" />
