@@ -10,8 +10,6 @@ public :
     //constructeur du mur, mur créer avec son point haut gauche et bas droit
     mur(const point &hautGauche, const point &basDroit);
 
-    //redéfinitions des methodes virtuelles
-    virtual void faitRebondir(balle& b,int arriveeDeLaBalle)  override;
 
 };
 

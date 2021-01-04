@@ -93,16 +93,18 @@ void terrain::afficherBalle()
     d_balle.afficher(WHITE);
 }
 
+/*
 void terrain::afficherPalet()
 {
     d_palet->afficher();
 }
+*/
 
 bool terrain::collision()
 {
     for(auto& mur : d_surfaceMur)
     {
-        if (d_balle.rentreDans(mur.get()))
+        if (d_balle.rebonditSur(mur.get()))
         {
             return true;
         }
@@ -110,23 +112,50 @@ bool terrain::collision()
     }
     for(auto& briques : d_surfaceBrique)
     {
-        if (d_balle.rentreDans(briques.get()))
+        if (d_balle.rebonditSur(briques.get()))
         {
             return true;
         }
     }
-    if (d_balle.rentreDans(d_palet.get()))
+    if (d_balle.rebonditSur(d_palet.get()))
     {
         return true;
     }
     return false;
 }
 
-void terrain::deplacerPalet()
+void terrain::deplacementPalet()
 {
     d_palet->deplacePalet();
+    if (paletADroiteDuTerrain())
+    {
+        int distanceADeplacer;
+        distanceADeplacer = d_palet->xPointBasDroit() - d_surfaceMur.back()->xPointHautGauche();
+        d_palet->deplacePalet(-distanceADeplacer);
+    }else if (paletAGaucheDuTerrain())
+    {
+        int distanceADeplacer;
+        distanceADeplacer =  d_surfaceMur.front()->xPointBasDroit() - d_palet->xPointHautGauche();
+        d_palet->deplacePalet(distanceADeplacer);
+    }
 }
 
+void terrain::modifierPalet()
+{
+    d_palet->afficher(BLACK);
+    deplacementPalet();
+    d_palet->afficher(WHITE);
+}
+
+bool terrain::paletAGaucheDuTerrain()
+{
+    return  d_surfaceMur.front()->xPointBasDroit() > d_palet->xPointHautGauche();
+}
+
+bool terrain::paletADroiteDuTerrain()
+{
+    return d_palet->xPointBasDroit() > d_surfaceMur.back()->xPointHautGauche();
+}
 
 void terrain::supprimeBriqueTouchee(int i)
 {
@@ -142,5 +171,3 @@ bool terrain::balleSousTerrain() const
 {
     return (d_balle.milieu().y() > d_palet->yPointBasDroit());
 }
-
-

@@ -14,7 +14,8 @@ public :
     virtual ~surfaceRebondissante();
     surfaceRebondissante(const point &hautGauche, const point &basDroit);
     virtual void afficher() const;
-    virtual void faitRebondir(balle& b,int arriveeDeLaBalle) =0;
+    virtual void afficher(int couleur) const;
+    virtual void faitRebondir(balle& b,int arriveeDeLaBalle);
     double xPointHautGauche() const;
     double yPointHautGauche() const;
     double xPointBasDroit() const;

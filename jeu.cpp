@@ -17,9 +17,10 @@ void jeu::run()
         }
         else{
             d_terrain.afficherBalle();
-            d_terrain.afficherPalet();
+            //d_terrain.afficherPalet();
         }
-        d_terrain.deplacerPalet();
+        //d_terrain.deplacementPalet();
+        d_terrain.modifierPalet();
         d_GameOver = d_terrain.plusDeBrique() || d_terrain.balleSousTerrain();
         Sleep(20);
     }
