@@ -49,7 +49,7 @@ public :
         @param surface
         @return vrai si
     */
-    bool rentreDans(surfaceRebondissante* surface);
+    bool rebonditSur(surfaceRebondissante* surface);
 
     /**
         Detecter les contacts par la gauche
@@ -71,6 +71,26 @@ public :
         @return vrai si la balle touche une surface par le bas
     */
     bool contactParLeBas(surfaceRebondissante* surface) const;
+
+    /**
+        Renvoyer vrai si la balle se déplace vers la droite
+    */
+    bool seDeplaceVersLaDroite() const;
+
+    /**
+        Renvoyer vrai si la balle se déplace vers la gauche
+    */
+    bool seDeplaceVersLaGauche() const;
+
+    /**
+        Renvoyer vrai si la balle se déplace vers le haut
+    */
+    bool seDeplaceVersLeHaut() const;
+
+    /**
+        Renvoyer vrai si la balle se déplace vers le bas
+    */
+    bool seDeplaceVersLeBas() const;
 
     static const int CONTACT_VERTICAL;
     static const int CONTACT_HORIZONTAL;

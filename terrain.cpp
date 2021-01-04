@@ -104,7 +104,7 @@ bool terrain::collision()
 {
     for(auto& mur : d_surfaceMur)
     {
-        if (d_balle.rentreDans(mur.get()))
+        if (d_balle.rebonditSur(mur.get()))
         {
             return true;
         }
@@ -112,12 +112,12 @@ bool terrain::collision()
     }
     for(auto& briques : d_surfaceBrique)
     {
-        if (d_balle.rentreDans(briques.get()))
+        if (d_balle.rebonditSur(briques.get()))
         {
             return true;
         }
     }
-    if (d_balle.rentreDans(d_palet.get()))
+    if (d_balle.rebonditSur(d_palet.get()))
     {
         return true;
     }
