@@ -5,18 +5,28 @@ jeu::jeu(const std::string& nomFichierTerrain) : d_terrain{nomFichierTerrain}, d
 
 void jeu::run()
 {
+    d_terrain.afficherToutTerrain();
     while(!d_GameOver)
     {
-        cleardevice();
-        d_terrain.afficher();
-        d_terrain.collision();
-        d_terrain.deplacerPalet();
-        d_GameOver = d_terrain.plusDeBrique();
+
+
+        if (d_terrain.collision())
+        {
+            cleardevice();
+            d_terrain.afficherToutTerrain();
+        }
+        else{
+            d_terrain.afficherBalle();
+            //d_terrain.afficherPalet();
+        }
+        //d_terrain.deplacementPalet();
+        d_terrain.modifierPalet();
+        d_GameOver = d_terrain.plusDeBrique() || d_terrain.balleSousTerrain();
         Sleep(20);
     }
 }
 
 void jeu::afficher()
 {
-    d_terrain.afficher();
+    d_terrain.afficherToutTerrain();
 }

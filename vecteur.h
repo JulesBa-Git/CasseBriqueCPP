@@ -3,40 +3,117 @@
 #ifndef VECTEUR_H
 #define VECTEUR_H
 
-//classe représentant un vecteur deux dimensions qui va nous servir a representer la vitesse de la balle
-
+/*! \class vecteur
+ *  \brief classe representant un vecteur
+ *
+ *  Classe representant un vecteur a deux dimensions qui va servir a representer la vitesse de la balle
+ */
 
 class vecteur {
 public:
-//constructeur :
-//par default initialise un vecteur a (0,0)
+
+    /*!
+    *  \brief Constructeur
+    *
+    *  Constructeur par default de la classe vecteur (qui initialise un vecteur a (0,0))
+    */
     vecteur();
-//avec ses deux composantes (x,y)
+
+    /*!
+    *  \brief Constructeur
+    *
+    *  Constructeur de la classe vecteur
+    *
+    *  \param x : reel correspondant a l'abscisse d'un vecteur
+    *  \param y : reel correspondant a l'ordonnee d'un vecteur
+    */
     vecteur(double x,double y);
 
-//fonctions renvoyant les composantes x et y du vecteur
+    /*!
+    *  \brief L'abscisse du vecteur
+    *
+    *   Methode qui permet de renvoyer l'abscisse d'un vecteur
+    *
+    *  \return d_x : reel correspondant a l'abscisse d'un vecteur
+    */
     double x() const;
+
+    /*!
+    *  \brief L'ordonnee du vecteur
+    *
+    *   Methode qui permet de renvoyer l'ordonnee d'un vecteur
+    *
+    *  \return d_y : reel correspondant a l'ordonnee d'un vecteur
+    */
     double y() const;
 
-//procédure permettant de modifier le vecteur
+    /*!
+    *  \brief Modifie le vecteur
+    *
+    *   Methode qui permet de modifier un vecteur
+    */
     void devient(double x, double y);
 
-//opérateur unaire permettant d'inverser le vecteur
+    /*!
+    *  \brief Inverse un vecteur
+    *
+    *   Operateur qui permet d'inverser un vecteur
+    *
+    *  \return le vecteur de signe oppose (-x et -y)
+    */
     vecteur  operator-() const;
 
-//opérateur permettant de multiplier un vecteur par un réel, nous servira a modifier la vitesse en fonction d'un pourcentage
+    /*!
+    *  \brief Multiplie un vecteur par un pourcentage
+    *
+    *   Operateur qui permet de multiplier un vecteur par un réel
+    *   Servira a modifier la vitesse en fonction d'un pourcentage
+    *   Modifie l'objet
+    *
+    *  \return ce vecteur multiplie par un reel
+    */
     vecteur& operator*=(double reel);
-    vecteur  operator*(double reel) const;
 
-//procédures permettant de tester les constructeur u vecteur
+    /*!
+    *  \brief Multiplie un vecteur par un pourcentage
+    *
+    *   Operateur qui permet de multiplier un vecteur par un réel
+    *   Servira a modifier la vitesse en fonction d'un pourcentage
+    *
+    *  \return le vecteur multiplie par un reel
+    */
+    vecteur operator*(double reel) const;
+
+    /*!
+    *  \brief Affiche un vecteur
+    *
+    *   Methode qui permet de tester les constructeurs d'un vecteur
+    *   Affiche un vecteur sur un flux (ost)
+    */
     void print(std::ostream& ost) const;
+
+    /*!
+    *  \brief Lit un vecteur
+    *
+    *   Methode qui permet de tester les constructeurs d'un vecteur
+    *   Lit un vecteur depuis un flux (ist)
+    */
     void read(std::istream& ist);
+
 private:
-    double d_x;
-    double d_y;
+
+    double d_x; /*!< Reel correspondant a l'abscisse d'un vecteur. */
+    double d_y; /*!< Reel correspondant a l'ordonnee d'un vecteur. */
+
 };
 
-//opérateur permettant de faciliter l'usage de la multiplication entre reel et vecteur présente dans la classe
+/*!
+ *  \brief Multiplie un vecteur par un reel
+ *
+ *   Opérateur qui permet de multiplier un vecteur par un réel presents dans la classe
+ *
+ *  \return le vecteur multiplie par un reel
+ */
 vecteur operator*(double val, const vecteur& v);
 
 #endif // VECTEUR_H
