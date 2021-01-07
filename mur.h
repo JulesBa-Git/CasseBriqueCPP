@@ -23,6 +23,7 @@ public :
     */
     mur(const point &hautGauche, const point &basDroit);
 
+
 };
 
 #endif // MUR_H
