@@ -1,4 +1,6 @@
 #include "balle.h"
+#include"surfaceRebondissante.h"
+
 
 const int balle::CONTACT_VERTICAL{1};
 const int balle::CONTACT_HORIZONTAL{2};
@@ -91,7 +93,8 @@ bool balle::rebonditSur(surfaceRebondissante* surface)
             surface->faitRebondir(*this,CONTACT_HORIZONTAL);
         return true;
     }
-    else{
+    else
+    {
         return false;
     }
 }
@@ -116,24 +119,28 @@ bool balle::seDeplaceVersLeBas() const
     return d_vitesse.y() > 0;
 }
 
-bool balle::contactParLaGauche(surfaceRebondissante* surface) const
+bool balle::contactParLeHaut(surfaceRebondissante* surface)const
 {
-    return (d_centre.x()-d_radius > surface->pointHautGauche().x() && d_centre.x()-d_radius < surface->pointBasDroit().x() && d_centre.y() > surface->pointHautGauche().y() && d_centre.y() < surface->pointBasDroit().y());
-}
-
-bool balle::contactParLaDroite(surfaceRebondissante* surface) const
-{
-    return (d_centre.x()+d_radius > surface->pointHautGauche().x() && d_centre.x()+d_radius < surface->pointBasDroit().x() && d_centre.y() > surface->pointHautGauche().y() && d_centre.y() < surface->pointBasDroit().y());
-}
-
-bool balle::contactParLeHaut(surfaceRebondissante* surface) const
-{
-    return (d_centre.y()-d_radius > surface->pointHautGauche().y() && d_centre.y()-d_radius < surface->pointBasDroit().y() && d_centre.x() > surface->pointHautGauche().x() && d_centre.x() < surface->pointBasDroit().x());
+    point hautDeLaBalle{d_centre.x(), d_centre.y()-d_radius};
+    return hautDeLaBalle.estDans(surface);
 }
 
 bool balle::contactParLeBas(surfaceRebondissante* surface) const
 {
-    return (d_centre.y()+d_radius > surface->pointHautGauche().y() && d_centre.y()+d_radius < surface->pointBasDroit().y() && d_centre.x() > surface->pointHautGauche().x() && d_centre.x() < surface->pointBasDroit().x());
+    point basDeLaBalle{d_centre.x(),d_centre.y()+d_radius};
+    return basDeLaBalle.estDans(surface);
+}
+
+bool balle::contactParLaGauche(surfaceRebondissante* surface)const
+{
+    point gaucheDeLaBalle{d_centre.x()-d_radius,d_centre.y()};
+    return gaucheDeLaBalle.estDans(surface);
+}
+
+bool balle::contactParLaDroite(surfaceRebondissante* surface)const
+{
+    point droiteDeLaBalle{d_centre.x()+d_radius,d_centre.y()};
+    return droiteDeLaBalle.estDans(surface);
 }
 
 

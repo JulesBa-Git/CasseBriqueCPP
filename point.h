@@ -4,6 +4,8 @@
 #ifndef POINT_H
 #define POINT_H
 
+class surfaceRebondissante;
+
 //classe représentant un point dans un espace a deux dimensions qui va composé la balle
 
 class point{
@@ -29,6 +31,12 @@ public :
     void deplaceEn(double x, double y);
 
     bool operator==(const point& pt) const;
+
+    bool estDans(surfaceRebondissante* surface)const;
+    bool estEnDessousDe(const point& pt) const;
+    bool estADroiteDe(const point& pt) const;
+    bool estAGaucheDe(const point& pt) const;
+    bool estAuDessusDe(const point& pt) const;
 
 private :
 
