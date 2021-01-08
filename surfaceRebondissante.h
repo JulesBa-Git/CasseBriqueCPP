@@ -45,9 +45,6 @@ public :
     */
     virtual void afficher() const;
 
-    virtual void afficher(int couleur) const;
-    virtual void faitRebondir(balle& b,int arriveeDeLaBalle);
-
 
     /*!
     *  \brief Affiche une surface rebondissante

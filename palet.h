@@ -34,16 +34,6 @@ public :
     void deplacePalet();
 
 
-    //redéfinitions des methodes virtuelles
-
-
-    //methodes permettant de deplacer le palet
-    void deplacePalet();
-    void deplacePalet(int distance);
-
-private :
-    static const int TAILLE_DEPLACEMENT = 20;
-
     /*!
     *  \brief Deplace le palet
     *
