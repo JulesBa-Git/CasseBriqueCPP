@@ -22,6 +22,8 @@ public :
     */
     BriqueNormale(const point &hautGauche, const point &basDroit);
 
+    virtual void afficher() const override;
+
     static const int NUMERO_BRIQUE; /*!< Numero (entier) correspondant a ce type de brique (brique normale). */
 };
 

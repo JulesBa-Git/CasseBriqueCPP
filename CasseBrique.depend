@@ -14,23 +14,25 @@
 	"terrain.h"
 	<windows.h>
 
-1609082946 source:d:\l3\s5\cassebrique\cassebriquecpp\point.cpp
+1610047946 source:d:\l3\s5\cassebrique\cassebriquecpp\point.cpp
 	"point.h"
+	"surfaceRebondissante.h"
 
-1609082939 d:\l3\s5\cassebrique\cassebriquecpp\point.h
+1610099938 d:\l3\s5\cassebrique\cassebriquecpp\point.h
 	<iostream>
 	<cmath>
 
 1609084819 source:d:\l3\s5\cassebrique\cassebriquecpp\vecteur.cpp
 	"vecteur.h"
 
-1609084810 d:\l3\s5\cassebrique\cassebriquecpp\vecteur.h
+1610099938 d:\l3\s5\cassebrique\cassebriquecpp\vecteur.h
 	<iostream>
 
-1609265126 source:d:\l3\s5\cassebrique\cassebriquecpp\balle.cpp
+1610047946 source:d:\l3\s5\cassebrique\cassebriquecpp\balle.cpp
 	"balle.h"
+	"surfaceRebondissante.h"
 
-1609265126 d:\l3\s5\cassebrique\cassebriquecpp\balle.h
+1610099938 d:\l3\s5\cassebrique\cassebriquecpp\balle.h
 	"point.h"
 	"vecteur.h"
 	"graphics.h"
@@ -45,60 +47,67 @@
 	<math.h>
 	"graphics.h"
 
-1609179244 source:d:\l3\s5\cassebrique\cassebriquecpp\surfacerebondissante.cpp
+1610047946 source:d:\l3\s5\cassebrique\cassebriquecpp\surfacerebondissante.cpp
 	"surfaceRebondissante.h"
 
-1609179244 d:\l3\s5\cassebrique\cassebriquecpp\surfacerebondissante.h
+1610099938 d:\l3\s5\cassebrique\cassebriquecpp\surfacerebondissante.h
 	"graphics.h"
 	"point.h"
 	"balle.h"
 
-1609178851 source:d:\l3\s5\cassebrique\cassebriquecpp\mur.cpp
+1609595039 source:d:\l3\s5\cassebrique\cassebriquecpp\mur.cpp
 	"mur.h"
+	"surfaceRebondissante.h"
 
-1609178851 d:\l3\s5\cassebrique\cassebriquecpp\mur.h
+1610099938 d:\l3\s5\cassebrique\cassebriquecpp\mur.h
 	"surfaceRebondissante.h"
 	"balle.h"
 	<iostream>
 
-1609243088 source:d:\l3\s5\cassebrique\cassebriquecpp\brique.cpp
+1610102300 source:d:\l3\s5\cassebrique\cassebriquecpp\brique.cpp
 	"brique.h"
-
-1609241318 d:\l3\s5\cassebrique\cassebriquecpp\brique.h
 	"surfaceRebondissante.h"
 
-1609270528 source:d:\l3\s5\cassebrique\cassebriquecpp\terrain.cpp
+1610100448 d:\l3\s5\cassebrique\cassebriquecpp\brique.h
+	"surfaceRebondissante.h"
+
+1610105596 source:d:\l3\s5\cassebrique\cassebriquecpp\terrain.cpp
 	"terrain.h"
 
-1609270357 d:\l3\s5\cassebrique\cassebriquecpp\terrain.h
+1610105029 d:\l3\s5\cassebrique\cassebriquecpp\terrain.h
 	<iostream>
 	<vector>
+	<memory>
+	<fstream>
+	<ctime>
 	"surfaceRebondissante.h"
 	"balle.h"
 	"palet.h"
 	"mur.h"
 	"brique.h"
-	<memory>
-	<fstream>
+	"briqueNormal.h"
+	"briqueMolle.h"
+	"briqueDure.h"
+	"briqueVie.h"
 
-1609266227 source:d:\l3\s5\cassebrique\cassebriquecpp\palet.cpp
+1610063400 source:d:\l3\s5\cassebrique\cassebriquecpp\palet.cpp
 	"palet.h"
 	<iostream>
 
-1609266276 d:\l3\s5\cassebrique\cassebriquecpp\palet.h
+1610100056 d:\l3\s5\cassebrique\cassebriquecpp\palet.h
 	"surfaceRebondissante.h"
 
-1609270548 source:d:\l3\s5\cassebrique\cassebriquecpp\jeu.cpp
+1609595039 source:d:\l3\s5\cassebrique\cassebriquecpp\jeu.cpp
 	"jeu.h"
 
-1609264124 d:\l3\s5\cassebrique\cassebriquecpp\jeu.h
+1610099938 d:\l3\s5\cassebrique\cassebriquecpp\jeu.h
 	"terrain.h"
 	<windows.h>
 
-1609246204 source:d:\l3\s5\cassebrique\cassebriquecpp\briquenormal.cpp
+1610103723 source:d:\l3\s5\cassebrique\cassebriquecpp\briquenormal.cpp
 	"BriqueNormal.h"
 
-1609246189 d:\l3\s5\cassebrique\cassebriquecpp\briquenormal.h
+1610102300 d:\l3\s5\cassebrique\cassebriquecpp\briquenormal.h
 	"brique.h"
 	"point.h"
 
@@ -453,4 +462,102 @@
 1610093389 source:c:\users\celad\onedrive\bureau\l3\qualite prog\casse_briques\cassebriquecpp-test\cassebriquecpp\vecteurtest.cpp
 	"doctest.h"
 	"vecteur.h"
+
+1610047946 source:d:\l3\s5\cassebrique\cassebriquecpp\briquetest.cpp
+	"doctest.h"
+	"brique.h"
+
+1610099938 d:\l3\s5\cassebrique\cassebriquecpp\doctest.h
+	<signal.h>
+	<iosfwd>
+	<cstddef>
+	<ostream>
+	<ciso646>
+	<type_traits>
+	"doctest_fwd.h"
+	<ctime>
+	<cmath>
+	<climits>
+	<math.h>
+	<new>
+	<cstdio>
+	<cstdlib>
+	<cstring>
+	<limits>
+	<utility>
+	<fstream>
+	<sstream>
+	<iostream>
+	<algorithm>
+	<iomanip>
+	<vector>
+	<atomic>
+	<mutex>
+	<set>
+	<map>
+	<exception>
+	<stdexcept>
+	<csignal>
+	<cfloat>
+	<cctype>
+	<cstdint>
+	<sys/types.h>
+	<unistd.h>
+	<sys/sysctl.h>
+	<AfxWin.h>
+	<windows.h>
+	<Windows.h>
+	<io.h>
+	<sys/time.h>
+	<unistd.h>
+
+1610047946 source:d:\l3\s5\cassebrique\cassebriquecpp\jeutest.cpp
+	"doctest.h"
+	"jeu.h"
+
+1610047946 source:d:\l3\s5\cassebrique\cassebriquecpp\maintest.cpp
+	"doctest.h"
+	"jeu.h"
+
+1610099938 source:d:\l3\s5\cassebrique\cassebriquecpp\balletest.cpp
+	"doctest.h"
+	"balle.h"
+	"surfaceRebondissante.h"
+
+1610099938 source:d:\l3\s5\cassebrique\cassebriquecpp\pointtest.cpp
+	"doctest.h"
+	"point.h"
+	"surfaceRebondissante.h"
+
+1610099938 source:d:\l3\s5\cassebrique\cassebriquecpp\surfacerebondissantetest.cpp
+	"doctest.h"
+	"surfaceRebondissante.h"
+
+1610099938 source:d:\l3\s5\cassebrique\cassebriquecpp\terraintest.cpp
+
+1610099938 source:d:\l3\s5\cassebrique\cassebriquecpp\vecteurtest.cpp
+	"doctest.h"
+	"vecteur.h"
+
+1610101370 source:d:\l3\s5\cassebrique\cassebriquecpp\briquemolle.cpp
+	"briqueMolle.h"
+
+1610101370 d:\l3\s5\cassebrique\cassebriquecpp\briquemolle.h
+	"brique.h"
+	"graphics.h"
+
+1610102955 source:d:\l3\s5\cassebrique\cassebriquecpp\briquedure.cpp
+	"briqueDure.h"
+
+1610102894 d:\l3\s5\cassebrique\cassebriquecpp\briquedure.h
+	"brique.h"
+	"graphics.h"
+
+1610105719 source:d:\l3\s5\cassebrique\cassebriquecpp\briquevie.cpp
+	"briqueVie.h"
+
+1610103723 d:\l3\s5\cassebrique\cassebriquecpp\briquevie.h
+	"brique.h"
+	<ctime>
+	<random>
 
