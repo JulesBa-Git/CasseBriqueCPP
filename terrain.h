@@ -2,12 +2,17 @@
 #include <vector>
 #include <memory>
 #include <fstream>
+#include <ctime>
 
 #include "surfaceRebondissante.h"
 #include "balle.h"
 #include "palet.h"
 #include "mur.h"
 #include "brique.h"
+#include "briqueNormal.h"
+#include "briqueMolle.h"
+#include "briqueDure.h"
+#include "briqueVie.h"
 
 
 #ifndef TERRAIN_H

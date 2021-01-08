@@ -41,6 +41,10 @@ public :
     */
     void deplacePalet(int distance);
 
+    double largeurPalet() const;
+
+    double positionBalleRelativeAuPalet(const balle& b) const;
+
 private :
 
 

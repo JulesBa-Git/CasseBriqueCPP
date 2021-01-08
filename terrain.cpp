@@ -21,7 +21,7 @@ terrain::terrain(const std::string& nomFichierTerrain):
 
         //Palet
 
-        d_palet = std::make_unique<palet>(point{(xPointBasDroit/2)-20, yPointBasDroit-5}, point{(xPointBasDroit/2)+20, yPointBasDroit});
+        d_palet = std::make_unique<palet>(point{(xPointBasDroit/2)-20, yPointBasDroit-10}, point{(xPointBasDroit/2)+20, yPointBasDroit});
 
         //Briques test avec plusieurs briques auto
 
@@ -30,10 +30,33 @@ terrain::terrain(const std::string& nomFichierTerrain):
 
         /*hauteur-=100;
         largeur-=100;*/
-
+        int QuelBrique = 0;
+        srand(time(NULL));
         for(int i=xPointHautGauche+60; i<=largeur+60; i+=60)
+        {
+            QuelBrique = 1+ rand()%4;
             for(int j=yPointHautGauche+60; j<=hauteur-100; j+=30)
-                d_surfaceBrique.push_back(std::make_unique<brique>(point{i,j},point{i+20,j+10}));
+            {
+                if(QuelBrique == 1 )
+                {
+                    d_surfaceBrique.push_back(std::make_unique<briqueVie>(point{i,j},point{i+20,j+10}));
+                }
+                else if(QuelBrique == 2 )
+                {
+                    d_surfaceBrique.push_back(std::make_unique<briqueMolle>(point{i,j},point{i+20,j+10}));
+                }
+                else if(QuelBrique == 3 )
+                {
+                    d_surfaceBrique.push_back(std::make_unique<briqueDure>(point{i,j},point{i+20,j+10}));
+                }
+                else
+                {
+                    d_surfaceBrique.push_back(std::make_unique<BriqueNormale>(point{i,j},point{i+20,j+10}));
+                }
+            }
+
+        }
+
 
 
 

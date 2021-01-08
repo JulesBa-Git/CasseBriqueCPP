@@ -61,7 +61,7 @@ public :
     *  pour dire que celle-ci a ete touche
     */
 
-    void aEteTouchee();
+    virtual void aEteTouchee();
 
 private :
     bool d_estTouchee; /*!< Booleen permettant de savoir si la balle a ete touche ou non. */

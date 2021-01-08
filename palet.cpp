@@ -23,6 +23,17 @@ void palet::deplacePalet()
         }
 }
 
+
+double palet::largeurPalet() const
+{
+    return pointBasDroit().x() - pointHautGauche().x();
+}
+
+double palet::positionBalleRelativeAuPalet(const balle& b) const
+{
+    return b.milieu().x() - pointHautGauche().x();
+}
+
 void palet::deplacePalet(int distance)
 {
     d_pointBasDroit.deplaceDe(distance,0);
